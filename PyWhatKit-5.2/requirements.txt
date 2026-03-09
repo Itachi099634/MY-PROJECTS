@@ -1,4 +1,0 @@
-Pillow
-pyautogui
-requests
-wikipedia
