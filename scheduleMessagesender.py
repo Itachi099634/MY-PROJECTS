@@ -3,11 +3,11 @@ import time
 
 print("WhatsApp Reminder Chatbot")
 
-number = input("+919643292600: ")
-message = input("YOGA CLASS: ")
+number = input("Enter phone number: ")
+message = input("Enter message: ")
 
-hour = int(input("11: "))
-minute = int(input("30: "))
+hour = int(input("Enter hour: "))
+minute = int(input("Enter minute: "))
 
 print("Message scheduled...")
 

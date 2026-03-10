@@ -1,14 +1,16 @@
-import pywhatkit
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
 
-print("Simple WhatsApp Chatbot")
+driver = webdriver.opera()
+driver.get("https://web.whatsapp.com")
 
-name = input("Enter your name: ")
-number = input("Enter the phone number (with country code): ")
-message = input("Enter the message you want to send: ")
+input("Scan QR code and press Enter")
 
-print("Sending message...")
+# open chat
+driver.get("https://web.whatsapp.com/send?phone=918178886307&text=Hello")
 
-pywhatkit.sendwhatmsg_instantly(number, message)
+time.sleep(10)
 
-print("Message sent successfully!")
-
+send = driver.find_element(By.XPATH, '//span[@data-icon="send"]')
+send.click()
