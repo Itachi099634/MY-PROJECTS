@@ -1,8 +1,14 @@
 from flask import Flask, request, jsonify
 import requests
 import openai
+import os 
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx # type: ignore
 
 app = Flask(__name__)
+
+
 
 # 🔐 CONFIG
 ACCESS_TOKEN = "YOUR_WHATSAPP_ACCESS_TOKEN"
